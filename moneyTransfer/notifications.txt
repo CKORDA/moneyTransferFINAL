@@ -1,0 +1,25 @@
+GRANT ALL PRIVILEGES ON moneyTransfer.* TO 'root'@'localhost' IDENTIFIED BY 'your_password';
+
+CREATE TABLE users (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	username VARCHAR(255) NULL,
+	email VARCHAR(255) NULL,
+    password VARCHAR(255) NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+
+);
+
+INSERT INTO users (username, email, password);
+SELECT * FROM users;
+
+CREATE TABLE notifications (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    message VARCHAR(255),
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    status INT DEFAULT 0
+);
+
+INSERT INTO notifications (title, message, status, timestamp) VALUES
+('Notification 1', 'This is the first notification', 0, NOW()),
+('Notification 2', 'This is the second notification', 0, NOW()),
+('Notification 3', 'This is the third notification', 0, NOW());

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Logged Users</title>
+</head>
+<body>
+	<?php
+    // Include the user_session.php file
+    require_once '../users/user_session.php';
+    ?>
+    <h1>Welcome, <span id="usernamePlaceholder"></span>!</h1>
+    <ul>
+        <li><a href="../pages/dashboard.php">Dashboard</a></li>
+        <li><a href="../pages/notifications.php">Notifications</a></li>
+        <li><a href="../pages/support.php">FAQ and Support</a></li>
+        <li><a href="../users/logout.php">Logout</a></li>
+    </ul>
+
+    <ul>
+        <li><a>Admin Area: </a></li>
+        <li><a href="../users/messages.php">Messages</a></li>
+        <li><a href="../users/userAdd.php">Add New User</a></li>
+        <li><a href="../users/userUpdate.php">Update User</a></li>
+        <li><a href="../users/deleteUser.php">Delete Users</a></li>
+    </ul>
+
+    <script>
+        // Update the placeholder with the username
+        document.getElementById('usernamePlaceholder').innerText = "<?php echo $encodedUsername; ?>";
+    </script>
+</body>
+</html>

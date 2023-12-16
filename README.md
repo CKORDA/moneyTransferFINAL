@@ -12,3 +12,4 @@ FLUSH PRIVILEGES;
 Admin Credentials: username: kordac1 password: kordac1
 User Credentials: username: chey password: chey
 
+Video Presentation Link: https://youtu.be/OcmEzEW3qDY

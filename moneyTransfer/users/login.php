@@ -11,7 +11,6 @@ if (isset($_SESSION['username'])) {
     echo '<input type="submit" value="Logout">';
     echo '</form>';
     session_destroy();
-    die();
 }
 
 $showForm = true;
@@ -47,7 +46,7 @@ if (count($_POST) > 0) {
                 $showForm = false;
             }
         } catch (PDOException $e) {
-            die("Error: " . $e->getMessage());
+            echo 'Error: ' . $e->getMessage();
         }
 
         // The credentials are wrong
